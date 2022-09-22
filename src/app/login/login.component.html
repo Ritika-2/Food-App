@@ -2,23 +2,30 @@
     <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="form-signin">
       <br>
       <br>
-      <img
+      <!-- <img
         src="https://media.istockphoto.com/photos/most-famous-thai-foods-red-curry-pork-green-curry-pork-chicken-soup-picture-id1161110617?b=1&k=20&m=1161110617&s=170667a&w=0&h=grZQQ1ZjPrLz6BChCWhANL7d3heUvMxfUh4C2KOziiw="
-        alt="" srcset="" height="72" width="80">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        alt="" srcset="" height="72" width="80"> -->
+      <h1 >Login</h1>
+      <h6> Please enter email address and password</h6>
 
-      <label for="inputEmail" class="sr-only">Email</label>
+  
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
       <input name="email" #email="ngModel" ngModel type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-      
-      <label for="inputPassword" class="sr-only">Password</label>
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword" class="form-label">Password</label>
       <input name="password" #password="ngModel" ngModel type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
+</div>
+<div class="mb-3">
       <select class="form-control" name="role" #role="ngModel" ngModel>
         <option value="" disabled selected><small>Select role</small></option>
         <option selected>Manager</option>
         <option>Staff</option>
       </select>
-     
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </div>
+      <button class="btn btn-primary" type="submit">Sign in</button>
     </form>
+  
   </div>
+
