@@ -1,24 +1,24 @@
-<div style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin: 25vh auto;" class="container">
-    <h2>Hey {{manager.name}}. Welcome!!</h2>
+<!-- <div style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin: 25vh auto;" class="container"> -->
+    <div class="container">
+    <!-- <h2>{{manager.name}} Manager</h2> -->
+    <h2>Manager: {{manager.name}}</h2>
     <div style="display: grid; grid-template-columns: 1.5fr 0.5fr;">
-        <div>
-            <div (click)="registerUser()" class="button">
-                <h5>Register staff</h5>
-            </div>
-            <div (click)="createMenu()" class="button">
-                <h5>Create Menu</h5>
-            </div>
-        </div>
-        <div>
-            <div (click)="viewStaff()" class="button">
-                <h5>View Staff</h5>
-            </div>
-            <div (click)="viewMenu()" class="button">
-                <h5>View Menu</h5>
-            </div>
-        </div>
-       
+    <div class="b">
+            <button (click)="registerUser()" class="btn1">
+                Register staff</button>
+    
+            <button (click)="createMenu()" class="btn2">
+               Create Menu</button>
+         
+   
+        
+            <button (click)="viewStaff()" class="btn3">
+                View Staff</button>
+   
+            <button (click)="viewMenu()" class="btn4">
+                View Menu</button>
     </div>
-
-
 </div>
+
+
+

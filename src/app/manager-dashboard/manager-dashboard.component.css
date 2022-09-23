@@ -1,4 +1,4 @@
-h2{
+/* h2{
     font-family:cursive;
     color: aliceblue;
 }
@@ -7,8 +7,44 @@ h5 {
     font-family: 'Times New Roman', Times, serif;
     color: antiquewhite;
     padding: 18% 5px;
+}*/
+h2{
+    color: aliceblue;
 }
-.button{
+
+.container{
+    font-size: 20px;
+    color: black;
+    border: 3px solid #fbbb09;
+    margin: auto;
+    background-origin: padding-box;
+    /* background: transparent; */
+  
+    
+    box-shadow: #fbbb09;
+   
+   
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-weight: bolder;
+    transition: 0.4s all ease-in-out;
+    font-family: "Roboto", serif;
+    box-shadow: 5px 2px 20px white;
+    background-image: url("https://cdn.pixabay.com/photo/2012/04/11/17/31/vegetables-29063__340.png");
+    background-size: cover;
+    
+}
+
+
+/* .b{
+    display:list-item;
+    text-align: center;
+    border-bottom: 50%;
+
+} */
+/*.button{
 
     background-color:#66a3ff;
     transition: 0.7s;
@@ -19,4 +55,132 @@ h5 {
     margin: 50px 10px;
     text-align: center;
     box-shadow: 5px 2px 20px white;
+} 
+
+
+ .button{
+   font-size: 20px;
+   color: #fbbb09;
+   border: 2px solid #fbbb09;
+   background: transparent;
+   margin: 0 20px;
+   padding: 20px 60px;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bolder;
+   transition: 0.4s all ease-in-out;
 }
+.button:hover{
+   color: bisque;
+}
+
+.button::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.btn-1::before{
+    top: unset;
+    bottom: 0;
+    height: 0;
+}
+
+.btn-2::before{
+    top: unset;
+    bottom: 0;
+    height: 100%;
+}
+ .btn-3::before{
+    right: unset;
+    left: 0;
+    width: 100%;
+}
+
+.btn-2::before{
+    bottom: unset;
+    top: 0;
+    height: 100%;
+} */
+
+.btn1{
+
+    background-color:aqua;
+    transition: 0.7s;
+    border: 1px solid #ccc;
+    border-radius:  15px 0px;
+   
+    height: 80px;
+    width: 150px;
+    margin: 50px 10px;
+    text-align: center;
+    box-shadow: 5px 2px 20px white;
+    display: flex;
+    
+} 
+.btn1:hover{
+    color:red;
+
+ }
+
+
+.btn2{
+
+    background-color:aqua;
+    transition: 0.7s;
+    border: 1px solid #ccc;
+    border-radius:  15px 0px;
+    height: 80px;
+    width: 150px;
+    margin: 50px 10px;
+    text-align: center;
+    box-shadow: 5px 2px 20px white;
+    display: flex;
+ 
+} 
+.btn2:hover{
+    color:red;
+ }
+.btn3{
+
+    background-color:aqua;
+    transition: 0.7s;
+    border: 1px solid #ccc;
+    border-radius:  15px 0px;
+    height: 80px;
+    width: 150px;
+    margin: 50px 10px;
+    text-align: center;
+    box-shadow: 5px 2px 20px white;
+    display: flex;
+   
+} 
+.btn3:hover{
+    color:red;
+ }
+.btn4{
+
+    background-color:aqua;
+    transition: 0.7s;
+    border: 1px solid #ccc;
+    border-radius:  15px 0px;
+    height: 80px;
+    width: 150px;
+    margin: 50px 10px;
+    text-align: center;
+    box-shadow: 5px 2px 20px white;
+    display: flex;
+  
+} 
+.btn4:hover{
+    color:red;
+ }
+
+
+
+
+
+
