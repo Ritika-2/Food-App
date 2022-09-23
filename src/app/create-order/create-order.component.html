@@ -1,4 +1,13 @@
+
+<!-- <button class="nav hidden-xs"><a [routerLink]="['./staff-dashboard']">Back</a></button> -->
+
+
 <div style="margin: 10% auto;" class="container">
+    <!-- <li class="nav hidden-xs"><a [routerLink]="['./staff-dashboard']">Back</a></li> -->
+    <button (click)="back()" class="btn btn-primary" type="submit">Back</button>
+    <div>
+  
+
     <form #createorder="ngForm" (ngSubmit)="createOrder(createorder)" class="form-signin">
         <br>
         <br>
@@ -41,6 +50,6 @@
         <p style="margin-top:10px;">Total price:  <span>{{orderTotal}}</span></p>
 
         <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">ORDER</button>
+        <button (click)="info()" class="btn btn-lg btn-primary btn-block" type="submit">ORDER </button>
     </form>
 </div>

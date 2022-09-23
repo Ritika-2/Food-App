@@ -19,5 +19,6 @@ export class MenuService {
   deleteMenu(menuId:number){
     return this.http.delete(`http://localhost:8080/menu/${menuId}`)
   }
+ 
 
 }

@@ -19,4 +19,7 @@ export class FoodproductService {
   getAllFoodProducts(){
     return this.http.get("http://localhost:8080/foodproduct")
   }
+  getToken(){
+    return localStorage.getItem('token');
+  }
 }

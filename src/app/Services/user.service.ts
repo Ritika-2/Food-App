@@ -31,4 +31,5 @@ export class UserService {
   deleteUser(userId:number){
     return this.http.delete(`http://localhost:8080/user/${userId}`)
   }
+ 
 }

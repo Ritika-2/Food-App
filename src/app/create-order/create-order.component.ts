@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { FoodorderService } from '../Services/foodorder.service';
 import { FoodproductService } from '../Services/foodproduct.service';
@@ -12,7 +13,7 @@ import { ItemService } from '../Services/item.service';
 })
 export class CreateOrderComponent implements OnInit {
 
-  constructor(private foodProduct: FoodproductService, private foodOrder: FoodorderService, private item: ItemService) { }
+  constructor(private foodProduct: FoodproductService, private foodOrder: FoodorderService, private item: ItemService,private route: Router) { }
 
   items: any[] = [];
   foodProductsRes: any;
@@ -72,5 +73,15 @@ export class CreateOrderComponent implements OnInit {
         })
       })
     })
+
+
+  }
+info(){
+  window.alert("Item addedd successfully")
+}
+
+  back(){
+    this.route.navigate(["/staff-dashboard"])
+   
   }
 }
