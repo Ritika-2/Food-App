@@ -1,13 +1,22 @@
-.CTAbutton {
+h2{
+    font-family:cursive;
+    color: aliceblue;
+}
+
+h5 {
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    padding: 18% 5px;
+}
+.button{
+
+    background-color:#66a3ff;
+    transition: 0.7s;
     border: 1px solid #ccc;
-    border-radius: 30px;
+    border-radius:  15px 0px;
     height: 80px;
     width: 150px;
     margin: 50px 10px;
     text-align: center;
-    box-shadow: 5px 2px 20px black;
-}
-
-h5 {
-    padding: 18% 5px;
+    box-shadow: 5px 2px 20px white;
 }

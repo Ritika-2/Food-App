@@ -1,21 +1,10 @@
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
 
 .box1{
     height: 181px;
-    width: 450px;
+    width: 491px;
+    justify-content: center;
+    margin-right: 40px;
   }
 
   .mainbox{
@@ -29,3 +18,29 @@
   input{
     margin: 10px;
   }
+  h1{
+    font-family:cursive;
+    color: aliceblue;
+  }
+  .form-control{
+   
+    justify-content: center;
+    margin-right: 40px;
+    opacity: .9;
+    
+  
+    
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    background-image: url("https://hospitalityinsights.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/restaurant%20manager.jpeg");
+    min-height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+  }
+

@@ -1,30 +1,23 @@
 <div style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin: 25vh auto;" class="container">
-    <h2>Hey {{manager.name}}. Good day!!</h2>
-    <div style="display: grid; grid-template-columns: 0.5fr 0.5fr;">
+    <h2>Hey {{manager.name}}. Welcome!!</h2>
+    <div style="display: grid; grid-template-columns: 1.5fr 0.5fr;">
         <div>
-            <div (click)="registerUser()" class="CTAbutton">
+            <div (click)="registerUser()" class="button">
                 <h5>Register staff</h5>
             </div>
-            <div (click)="createMenu()" class="CTAbutton">
+            <div (click)="createMenu()" class="button">
                 <h5>Create Menu</h5>
             </div>
         </div>
         <div>
-            <div (click)="viewStaff()" class="CTAbutton">
+            <div (click)="viewStaff()" class="button">
                 <h5>View Staff</h5>
             </div>
-            <div (click)="viewMenu()" class="CTAbutton">
+            <div (click)="viewMenu()" class="button">
                 <h5>View Menu</h5>
             </div>
         </div>
-        <!-- <div>
-            <div class="CTAbutton">  
-                <h5>Delete staff</h5>
-            </div>
-            <div class="CTAbutton">
-                <h5>Delete Menu</h5>
-            </div>
-        </div> -->
+       
     </div>
 
 
