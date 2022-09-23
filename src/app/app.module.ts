@@ -14,7 +14,9 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
-import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component'
+import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { EditProductsComponent } from './edit-products/edit-products.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.compo
     EditUserComponent,
     ViewOrdersComponent,
     CreateOrderComponent,
-    StaffDashboardComponent
+    StaffDashboardComponent,
+    AddItemComponent,
+    EditProductsComponent
   ],
   imports: [
     BrowserModule,

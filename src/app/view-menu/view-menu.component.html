@@ -1,16 +1,21 @@
 <div class="container" style="padding: 10px;">
     <button (click)="back()" class="btn btn-primary" type="submit">Back</button><br><br>
     <div style="display: flex; justify-content:space-between;">
-        <button style="color:bisque" class="btn btn-outline-secondary" (click)="deleteMenu()">Delete Menu</button>
-        <button style="color:bisque" class="btn btn-outline-secondary" (click)="addToMenu()">Add to Menu</button>
+        <!-- <button style="color:bisque" class="btn btn-outline-secondary" (click)="deleteMenu()">Delete Menu</button> -->
+        <button type="button" class="btn btn-outline-danger" (click)="deleteMenu()">Delete Menu</button>
+        <!-- <button style="color:bisque" class="btn btn-outline-secondary" (click)="addToMenu()">Add to Menu</button> -->
+        <button type="button" class="btn btn-outline-success" (click)="addToMenu()">Add to Menu</button>
     </div>
     <div class="list-group foodproduct" *ngFor = "let f of foodProducts">
         <a href="javascript:void(0)" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{f.name}}<span><img style="margin-left: 10px;" src="../../assets//icons/vegicon.png" alt="Veg" width="30" height="30"></span></h5>
-                <small (click)="deleteProduct(f.id)"><i class="fa-solid fa-trash"></i> </small>
+                <!-- <h5 class="mb-1">{{f.name}}<span><img style="margin-left: 10px;" src="../../assets//icons/vegicon.png" alt="Veg" width="30" height="30"></span></h5> -->
+                <h5 class="mb-1">{{f.name}}<span></span></h5>
+                <!-- <small (click)="deleteProduct(f.id)"><i class="fa-solid fa-trash"></i> </small> -->
+                <button type="button" class="btn btn-danger" (click)="deleteProduct(f.id)">Delete</button>
             </div>
-            <small> &#8377; {{f.price}}</small>
+            <!-- <small> &#8377; {{f.price}}</small> -->
+            <small>{{f.price| currency:'INR'}} </small>
         </a>
     </div>
 </div>
