@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   signup(){
-    this.route.navigate(["./"])
+    this.route.navigate(["./registration"])
   }
 
 }
