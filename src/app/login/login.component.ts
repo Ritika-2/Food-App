@@ -27,9 +27,15 @@ export class LoginComponent implements OnInit {
       this.route.navigate(["/manager-dashboard"])
     }else if(this.res.data.role === "Staff"){
       localStorage.setItem("user", JSON.stringify(this.res.data))
-      this.route.navigate(["/login"])
+      this.route.navigate(["/staff-dashboard"])
+   
     }
+   
    })
+  }
+
+  signup(){
+    this.route.navigate(["./"])
   }
 
 }

@@ -39,4 +39,6 @@ import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.compo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
