@@ -46,4 +46,8 @@ export class ViewMenuComponent implements OnInit {
       this.route.navigate(["/manager-dashboard"])
     })
   }
+
+  back(){
+    this.route.navigate(["/manager-dashboard"])
+  }
 }

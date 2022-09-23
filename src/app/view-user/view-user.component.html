@@ -1,5 +1,7 @@
 <div class="container">
+    <button (click)="back()" class="btn btn-primary" type="submit">Back</button><br><br><br>
     <h2>Staffs</h2>
+   
     <table class="table table-dark">
         <thead class="thead-dark">
             <tr>
@@ -15,8 +17,8 @@
                 <td>{{s.id}}</td>
                 <td>{{s.name}}</td>
                 <td>{{s.email}}</td>
-                <td><button class="btn btn btn-outline-primary"  [routerLink]="['/edit-user/',s.id]">EDIT</button></td>
-                <td><button class="btn btn-secondary" (click)="deleteUser(s.id)">DELETE</button></td>
+                <td><button style="color: yellow;" class="btn btn btn-outline-primary"  [routerLink]="['/edit-user/',s.id]">EDIT</button></td>
+                <td><button style="color: whitesmoke" class="btn btn-secondary" (click)="deleteUser(s.id)">DELETE</button></td>
             </tr>
         </tbody>
     </table>

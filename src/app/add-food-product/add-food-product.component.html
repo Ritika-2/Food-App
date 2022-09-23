@@ -1,4 +1,5 @@
 <div style="margin: 10% auto;" class="container">
+  <button (click)="back()" class="btn btn-primary" type="submit">Back</button>
     <form #addfoodproduct="ngForm" (ngSubmit)="addFoodProduct(addfoodproduct)" class="form-signin">
       <br>
       <br>
@@ -25,7 +26,7 @@
         <option>Non-veg</option>
       </select>
      <br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">ADD PRODUCT</button>
+      <button  (click)="info()" class="btn btn-lg btn-primary btn-block" type="submit">ADD PRODUCT</button>
     </form>
   </div>
   <!-- hey  -->

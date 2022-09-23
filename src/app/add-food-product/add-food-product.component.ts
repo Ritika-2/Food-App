@@ -35,5 +35,12 @@ export class AddFoodProductComponent implements OnInit {
      })     
     })
   }
+  back(){
+    this.route.navigate(["/manager-dashboard"])
+  }
+
+  info(){
+    window.alert("Product added suucessfully");
+  }
   
 }

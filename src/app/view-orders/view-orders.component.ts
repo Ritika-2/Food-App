@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FoodorderService } from '../Services/foodorder.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class ViewOrdersComponent implements OnInit {
   updateOrderRes:any;
   isReady = false;
   deliverBtn = false;  
-  constructor(private foodOrder: FoodorderService) { }
+  constructor(private foodOrder: FoodorderService, private route: Router) { }
   staff = JSON.parse(localStorage.getItem("user")!);
   ngOnInit(): void {
    this.foodOrder.getAllFoodOrdersByStaff(this.staff.id).subscribe(data=>{
@@ -39,6 +40,10 @@ export class ViewOrdersComponent implements OnInit {
         })
       })
     })
+  }
+
+  back(){
+    this.route.navigate(["/staff-dashboard"])
   }
 
 }

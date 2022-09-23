@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../Services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from '../Services/user.service';
 })
 export class ViewUserComponent implements OnInit {
   staffRes:any
-  constructor(private user: UserService) { }
+  constructor(private user: UserService, private route: Router) { }
 
   deleteUserRes:any;
   ngOnInit(): void {
@@ -25,6 +26,10 @@ export class ViewUserComponent implements OnInit {
         this.staffRes = data;
       })
     })
+  }
+
+  back(){
+    this.route.navigate(["/manager-dashboard"])
   }
 
 }

@@ -2,8 +2,8 @@
     margin-right: 5px; border: 1px solid #ccc; border-radius: 50%; background-color: white;
 }
 
-h1, p{
-    color: aliceblue;
+h1, p, small{
+    color: black;
     font-weight: bold;
     font-style: italic;
 }
