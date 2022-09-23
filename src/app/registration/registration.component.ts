@@ -19,6 +19,7 @@ export class RegistrationComponent implements OnInit {
       console.log(res);
       if(form.value.data.role === "Staff"){
         this.route.navigate(["/manager-dashboard"])
+       
       }else{
         this.route.navigate(["/login"])
       } 

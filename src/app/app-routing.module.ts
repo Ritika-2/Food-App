@@ -6,6 +6,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { LoginComponent } from './login/login.component';
 import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { ViewUserComponent } from './view-user/view-user.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "registration", component: RegistrationComponent},
   {path: "manager-dashboard", component: ManagerDashboardComponent},
+  {path:"staff-dashboard", component:StaffDashboardComponent },
   {path: "menu", component: ViewMenuComponent},
   {path: "add-foodproduct", component: AddFoodProductComponent},
   {path: "users", component: ViewUserComponent},
