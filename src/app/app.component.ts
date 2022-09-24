@@ -7,13 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  error:any
+  isLoggedIn:boolean=false;
   title = 'foodappFE';
   logOut(){
-    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem("isLoggedIn");
     
     window.alert("You have logged out");
     // this.route.navigate(["/login"])
     
+  }
+
+  checkLogin(){
+   return Boolean(localStorage.getItem("isLoggedIn"));
   }
 }
