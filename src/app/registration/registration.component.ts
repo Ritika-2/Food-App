@@ -26,7 +26,7 @@ export class RegistrationComponent implements OnInit {
     })
   }
   back(){
-    this.route.navigate(["/manager-dashboard"])
+    this.route.navigate(["/login"])
   }
 
 }

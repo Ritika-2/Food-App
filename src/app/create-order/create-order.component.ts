@@ -77,7 +77,7 @@ export class CreateOrderComponent implements OnInit {
 
   }
 info(){
-  window.alert("Order has been  created successfully")
+  window.alert("Order has been  placed successfully")
 }
 
   back(){

@@ -2,8 +2,16 @@
     margin-right: 5px; border: 1px solid #ccc; border-radius: 50%; background-color: white;
 }
 
-h1, p, small{
+ p, small{
     color: black;
     font-weight: bold;
     font-style: italic;
+}
+h1{
+    color: aliceblue;
+    font-weight: bolder;
+}
+.c2, .c1{
+    color: white;
+    font-weight: bolder;
 }
