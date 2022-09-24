@@ -27,9 +27,9 @@ public class FoodProductService {
 		ResponseStructure<FoodProduct> structure = new ResponseStructure<>();
 		Optional<Menu> optional = menuDao.getMenuById(menuId); 
 		if(optional.isEmpty()) {
+			
+			structure.setMessage("Id Not Found");
 			structure.setError(true);
-			structure.setMessage("No menu Id found");
-			System.out.println("No menu with that id");
 		}else {
 			foodProduct.setMenu(optional.get());
 			structure.setError(false);
@@ -42,7 +42,6 @@ public class FoodProductService {
 	public ResponseEntity<ResponseStructure<List<FoodProduct>>> getFoodProductsInMenu(int menuId){
 		ResponseStructure<List<FoodProduct>> structure = new ResponseStructure<>();
 		structure.setError(false);
-		structure.setMessage("food products in menu retrived");
 		structure.setData(foodProductDao.getFoodProductsInMenu(menuId));
 		return new ResponseEntity<ResponseStructure<List<FoodProduct>>>(structure, HttpStatus.OK);
 	}
@@ -52,11 +51,10 @@ public class FoodProductService {
 		Optional<FoodProduct> optional = foodProductDao.getFoodProductById(id);
 		if(optional.isEmpty()) {
 			structure.setError(true);
-			structure.setMessage("No id found");
 		}
 		else {
 			structure.setError(false);
-			structure.setMessage("Food Product deleted");
+			structure.setMessage("Deleted Food Product");
 			foodProductDao.deleteFoodProduct(id);
 		}
 		return new ResponseEntity<ResponseStructure<String>>(structure, HttpStatus.OK);

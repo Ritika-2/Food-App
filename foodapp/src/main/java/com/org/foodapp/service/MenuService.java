@@ -1,5 +1,6 @@
 package com.org.foodapp.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,6 +64,21 @@ public class MenuService {
 			menuDao.deleteMenu(id);
 	}
 		return new ResponseEntity<ResponseStructure<String>>(structure, HttpStatus.OK);
+	}
+	
+
+
+
+
+
+	
+	public ResponseEntity<ResponseStructure<List<Menu>>> getall()
+	{
+		ResponseStructure<List<Menu>> responseStructure= new ResponseStructure<List<Menu>>();
+		responseStructure.setMessage("Found"); 
+		
+		responseStructure.setData(menuDao.getall());
+		return new ResponseEntity<ResponseStructure<List<Menu>>>(responseStructure, HttpStatus.OK);
 	}
 
 }

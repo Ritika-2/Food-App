@@ -49,4 +49,22 @@ public class ItemService {
         return new ResponseEntity<ResponseStructure<Item>>(structure, HttpStatus.OK);
         
     }
+    
+    public ResponseEntity<ResponseStructure<Item>> getby(int id)
+    { Optional<Item> items=itemDao.getby(id); 
+    ResponseStructure<Item> responseStructure=new ResponseStructure<>(); 
+    if(items.isEmpty())
+    {
+    	responseStructure.setMessage("Id not found");
+    
+    return new ResponseEntity<ResponseStructure<Item>>(responseStructure,HttpStatus.NOT_FOUND);
+    }
+    else
+    { 
+    	responseStructure.setMessage("Saved"); 
+    	
+    	responseStructure.setData(items.get());
+    	return new ResponseEntity<ResponseStructure<Item>>(responseStructure,HttpStatus.OK);}}
+    
+    
 }

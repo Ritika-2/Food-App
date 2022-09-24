@@ -2,6 +2,7 @@ package com.org.foodapp.dto;
 
 
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -25,8 +26,8 @@ public class FoodOrder {
 	private int id;
 	private String status;
 	private double totalPrice;
-	private LocalTime orderCreatedTime;
-	private LocalTime orderDeliveryTime;
+	private LocalDateTime orderCreatedTime;
+	private LocalDateTime orderDeliveryTime;
 	private String customerName;
 	private long contactNumber;
 	
@@ -64,16 +65,17 @@ public class FoodOrder {
 	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	public LocalTime getOrderCreatedTime() {
+	
+	public LocalDateTime getOrderCreatedTime() {
 		return orderCreatedTime;
 	}
-	public void setOrderCreatedTime(LocalTime orderCreatedTime) {
+	public void setOrderCreatedTime(LocalDateTime orderCreatedTime) {
 		this.orderCreatedTime = orderCreatedTime;
 	}
-	public LocalTime getOrderDeliveryTime() {
+	public LocalDateTime getOrderDeliveryTime() {
 		return orderDeliveryTime;
 	}
-	public void setOrderDeliveryTime(LocalTime orderDeliveryTime) {
+	public void setOrderDeliveryTime(LocalDateTime orderDeliveryTime) {
 		this.orderDeliveryTime = orderDeliveryTime;
 	}
 	public String getCustomerName() {

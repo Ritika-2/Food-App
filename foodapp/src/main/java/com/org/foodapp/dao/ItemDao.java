@@ -18,9 +18,25 @@ public class ItemDao {
         return itemRepo.save(item);
     }
     
-    public Optional<Item> getItemById(int id){
-        return itemRepo.findById(id);
-}
+//    public Optional<Item> getItemById(int id){
+//        return itemRepo.findById(id);
+//}
+    
+    public Optional<Item> getby(int id)
+    {
+    	return itemRepo.findById(id);
+    } 
+    public Item delete(int id)
+    {
+    	Item items=getby(id).get();
+    	itemRepo.delete(items);
+    	return items;
+    	} 
+    public Item update(Item items, int id)
+    { 
+    	items.setId(id);
+    	return itemRepo.save(items);
+    }
 
 
 

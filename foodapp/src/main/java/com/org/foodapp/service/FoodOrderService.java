@@ -1,5 +1,6 @@
 package com.org.foodapp.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,10 +28,19 @@ public class FoodOrderService {
 	
 	
 	public ResponseEntity<ResponseStructure<FoodOrder>> saveFoodOrder(FoodOrder foodOrder, int id){
+		
+		LocalDateTime orderCreatedTime=LocalDateTime.now();
+//		LocalDateTime orderDeliveryTime=LocalDateTime.now().plusMinutes(30);
+		LocalDateTime orderDeliveryTime=LocalDateTime.now().plusMinutes(2);
+		
+		// Date and Time Setting for Backend
+		foodOrder.setOrderCreatedTime(orderCreatedTime);
+		foodOrder.setOrderDeliveryTime(orderDeliveryTime);
+		
 		Optional<User> optional = userDao.getUserById(id);
 		if(optional.isEmpty()) {
-			System.out.println("No id found");
-		}
+			System.out.println("Id Not Found");
+		}  
 		else {
 			foodOrder.setUser(optional.get());
 		}
@@ -48,11 +58,11 @@ public class FoodOrderService {
 		Optional<User> optional = userDao.getUserById(userId);
 		if(optional.isEmpty()) {
 			structure.setError(true);
-			structure.setMessage("No user found");
+			structure.setMessage("User Not Found");
 		}
 		else {
 			structure.setError(false);
-			structure.setMessage("Food Order Retrived");
+			structure.setMessage("Received Food Order");
 			structure.setData(optional.get().getFoodOrders());
 		}
 		return new ResponseEntity<ResponseStructure<List<FoodOrder>>>(structure, HttpStatus.OK);
@@ -63,11 +73,11 @@ public class FoodOrderService {
 		Optional<FoodOrder> foodOrderOptional = foodOrderDao.getFoodOrderById(foodOrderId);
 		if(foodOrderOptional.isEmpty()) {
 			structure.setError(true);
-			structure.setMessage("No foodOrder found");
+			structure.setMessage("FoodOrder Not Found");
 		}
 		else {
 			structure.setError(false);
-			structure.setMessage("Food Order Retrived");
+			structure.setMessage("Recieved Food Order");
 			structure.setData(foodOrderOptional.get());
 		}
 		return new ResponseEntity<ResponseStructure<FoodOrder>>(structure, HttpStatus.OK);
@@ -79,7 +89,7 @@ public class FoodOrderService {
 		User user = foodOrderTobeUpdated.getUser();
 		foodOrder.setUser(user);
 		structure.setError(false);
-		structure.setMessage("Food Order Status Updated");
+		structure.setMessage("Updated Food Order");
 		structure.setData(foodOrderDao.updateFoodOrder(foodOrder));
 		
 		return new ResponseEntity<ResponseStructure<FoodOrder>>(structure, HttpStatus.OK);
@@ -90,11 +100,11 @@ public class FoodOrderService {
 		Optional<FoodOrder> optional = foodOrderDao.getFoodOrderById(id);
 		if(optional.isEmpty()) {
 			structure.setError(true);
-			structure.setMessage("Food Order Not Found");
+			structure.setMessage("FoodOrder Not Found");
 		}
 		else {
 			structure.setError(false);
-			structure.setMessage("Food Order Deleted");
+			structure.setMessage("Food Order");
 			foodOrderDao.deleteFoodOrderById(id);
 		}
 		

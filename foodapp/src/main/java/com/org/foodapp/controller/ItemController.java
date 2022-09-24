@@ -3,6 +3,8 @@ package com.org.foodapp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,4 +24,30 @@ public class ItemController {
     public ResponseEntity<ResponseStructure<Item>> saveItem(@RequestBody Item item,@PathVariable int foodOrderId){
         return itemService.saveItem(item,foodOrderId);
     }
+    
+    
+    
+    
+    
+    //////////
+    
+    @GetMapping("/getitems/{id}")
+    public ResponseEntity<ResponseStructure<Item>> getby(@PathVariable int id)
+    {
+    	return itemService.getby(id);
+    }
+    
+//    @DeleteMapping("/deleteitems/{id}")
+//    public ResponseEntity<ResponseStructure<Item>> delete(@PathVariable int id)
+//    { 
+//    	return itemService.delete(id);
+//    	
+//    } 
+
+//    @PostMapping("/updateitems/{id}")
+//    public ResponseEntity<ResponseStructure<Item>> update(@RequestBody Item items,@PathVariable int id)
+//    {
+//    	return itemsService.update(items,id); 
+//    	
+//    }
 }

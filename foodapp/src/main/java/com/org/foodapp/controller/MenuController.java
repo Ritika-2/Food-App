@@ -1,5 +1,7 @@
 package com.org.foodapp.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,6 +34,19 @@ public class MenuController {
 	@DeleteMapping("/menu/{menuId}")
 	public ResponseEntity<ResponseStructure<String>> deleteMenu(@PathVariable int menuId){
 		return menuService.deleteMenu(menuId);
+	}
+	
+	@PostMapping("/updatemenu/{id}")
+//	public ResponseEntity<ResponseStructure<Menu>> update(@RequestBody Menu menu,@PathVariable int id)
+//	{
+//		return menuService.update(menu,id);
+//		
+//	}
+	
+	@GetMapping("/getallmenu")
+	public ResponseEntity<ResponseStructure<List<Menu>>> getall()
+	{
+		return menuService.getall();
 	}
 
 }

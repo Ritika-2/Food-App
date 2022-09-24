@@ -27,14 +27,17 @@ public class FoodProductController {
 	public ResponseEntity<ResponseStructure<FoodProduct>> saveFoodProduct(@RequestBody FoodProduct foodProduct, @PathVariable int menuId){
 		return foodProductService.savefFoodProduct(foodProduct, menuId);
 	}
+	
+
+	@DeleteMapping("/foodproduct/{foodProdId}")
+	public ResponseEntity<ResponseStructure<String>> deleteProduct(@PathVariable int foodProdId){
+		return foodProductService.deleteFoodProduct(foodProdId);
+	}	
+	
 	@GetMapping("/foodproduct/{menuId}")
 	public ResponseEntity<ResponseStructure<List<FoodProduct>>> getFoodProductsInMenu(@PathVariable int menuId){
 		return foodProductService.getFoodProductsInMenu(menuId);
 	}
 	
-	@DeleteMapping("/foodproduct/{foodProdId}")
-	public ResponseEntity<ResponseStructure<String>> deleteProduct(@PathVariable int foodProdId){
-		return foodProductService.deleteFoodProduct(foodProdId);
-	}	
 
 }

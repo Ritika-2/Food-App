@@ -21,6 +21,7 @@ public class FoodProduct {
 	
 	private String name;
 	private String type;
+	private String about;
 	private boolean availability;
 	private double price;
 	@JsonBackReference
@@ -30,7 +31,7 @@ public class FoodProduct {
 	
 	
 	
-	public int getId() {
+	public int getId() { 
 		return id;
 	}
 	public void setId(int id) {
@@ -47,6 +48,12 @@ public class FoodProduct {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getAbout() {
+		return about;
+	}
+	public void setAbout(String about) {
+		this.about = about;
 	}
 	public boolean isAvailability() {
 		return availability;
