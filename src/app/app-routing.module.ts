@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddFoodProductComponent } from './add-food-product/add-food-product.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -10,6 +11,7 @@ import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.compo
 import { ViewMenuComponent } from './view-menu/view-menu.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { ViewUserComponent } from './view-user/view-user.component';
+
 
 const routes: Routes = [
   {path: "login", component: LoginComponent},
@@ -21,7 +23,8 @@ const routes: Routes = [
   {path: "users", component: ViewUserComponent},
   {path: "edit-user/:id", component: EditUserComponent},
   {path: "view-orders", component: ViewOrdersComponent},
-  {path: "create-orders", component: CreateOrderComponent}
+  {path: "create-orders", component: CreateOrderComponent},
+  {path: "home",component:HomeComponent}
 ];
 
 @NgModule({

@@ -16,7 +16,8 @@ import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 import { AddItemComponent } from './add-item/add-item.component';
-import { EditProductsComponent } from './edit-products/edit-products.component'
+import { EditProductsComponent } from './edit-products/edit-products.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EditProductsComponent } from './edit-products/edit-products.component'
     CreateOrderComponent,
     StaffDashboardComponent,
     AddItemComponent,
-    EditProductsComponent
+    EditProductsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
