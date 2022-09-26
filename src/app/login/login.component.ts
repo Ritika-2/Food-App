@@ -27,7 +27,9 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("user", JSON.stringify(this.res.data))
       this.route.navigate(["/manager-dashboard"])
     }else if(this.res.data.role === "Staff"){
+      localStorage.setItem("isLoggedIn", "true")
       localStorage.setItem("user", JSON.stringify(this.res.data))
+      
       this.route.navigate(["/staff-dashboard"])
    
     }
